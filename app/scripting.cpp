@@ -149,7 +149,9 @@ static void _drop_receiver( lk::invoke_t &cxt )
     SolarField *SF = F.GetSolarFieldObject();
     var_map *V = SF->getVarMap();
 
-    std::string tname = lower_case( cxt.arg(0).as_string().ToStdString() );
+    wxString wxname = cxt.arg(0).as_string();
+    std::string tname = lower_case( wxname.ToStdString() );
+//    std::string tname = lower_case( cxt.arg(0).as_string().ToStdString() );
 
     for(size_t i=0; i<V->hels.size(); i++)
     {
@@ -207,7 +209,9 @@ static void _drop_heliostat_template( lk::invoke_t &cxt )
     SolarField *SF = F.GetSolarFieldObject();
     var_map *V = SF->getVarMap();
 
-    std::string tname = lower_case( cxt.arg(0).as_string().ToStdString() );
+    wxString wxname = cxt.arg(0).as_string();
+    std::string tname = lower_case( wxname.ToStdString() );
+//    std::string tname = lower_case( cxt.arg(0).as_string().ToStdString() );
 
     for(size_t i=0; i<V->hels.size(); i++)
     {
@@ -484,7 +488,7 @@ static void _get_layout_info( lk::invoke_t &cxt )
         r.vec()->push_back( lk::vardata_t() );
         r.vec()->at(i).empty_vector();
 
-        r.vec()->at(i).vec_append( hels->at(i)->getId() );
+        r.vec()->at(i).vec_append( (double)hels->at(i)->getId() );
 
         sp_point *loc = hels->at(i)->getLocation();
         r.vec()->at(i).vec_append( loc->x );
@@ -997,7 +1001,9 @@ static void _add_land( lk::invoke_t &cxt )
     if( cxt.arg_count() == 3 )
         is_append = cxt.arg(2).as_boolean();
 
-    std::string type = lower_case( cxt.arg(1).as_string().ToStdString() );
+    wxString wxname = cxt.arg(1).as_string();
+    std::string type = lower_case( wxname.ToStdString() );
+//    std::string type = lower_case( cxt.arg(1).as_string().ToStdString() );
 
     if( type.find("incl") != std::string::npos )
         type = "inclusion";
@@ -1016,7 +1022,11 @@ static void _add_land( lk::invoke_t &cxt )
     {
         pt.clear();
         for(size_t j=0; j<cxt.arg(0).vec()->at(i).vec()->size(); j++)
-            pt.push_back( cxt.arg(0).vec()->at(i).vec()->at(j).as_string().ToStdString() );
+        {
+            wxString wxname = cxt.arg(0).vec()->at(i).vec()->at(j).as_string();
+            pt.push_back( wxname.ToStdString() );
+        }
+//            pt.push_back( cxt.arg(0).vec()->at(i).vec()->at(j).as_string().ToStdString() );
 
         poly.push_back( join( pt, "," ) );
     }
@@ -1067,7 +1077,11 @@ static void _heliostats_by_region( lk::invoke_t &cxt )
     //which return data type?
     bool is_returnloc = false;
     if( cxt.arg_count() == 3 )
-        is_returnloc = lower_case( cxt.arg(2).as_string().ToStdString() ) == "location";
+    {
+        wxString wxname = cxt.arg(2).as_string();
+        is_returnloc = lower_case( wxname.ToStdString() ) == "location";
+//        is_returnloc = lower_case( cxt.arg(2).as_string().ToStdString() ) == "location";
+    }
     
     cxt.result().empty_vector();
     
@@ -1225,8 +1239,12 @@ static void _heliostats_by_region( lk::invoke_t &cxt )
                 //options table provided
                 if( cxt.arg(2).hash()->find("scale") != cxt.arg(2).hash()->end() )
                 {
-                    scale_s.push_back( cxt.arg(2).hash()->at("scale")->vec()->at(0).as_string().ToStdString() );
-                    scale_s.push_back( cxt.arg(2).hash()->at("scale")->vec()->at(1).as_string().ToStdString() );
+                    wxString wxname = cxt.arg(2).hash()->at("scale")->vec()->at(0).as_string();
+                    scale_s.push_back( wxname.ToStdString() );
+                    wxname = cxt.arg(2).hash()->at("scale")->vec()->at(1).as_string();
+                    scale_s.push_back( wxname.ToStdString() );
+//                    scale_s.push_back( cxt.arg(2).hash()->at("scale")->vec()->at(0).as_string().ToStdString() );
+//                    scale_s.push_back( cxt.arg(2).hash()->at("scale")->vec()->at(1).as_string().ToStdString() );
                 }
                 else
                 {
@@ -1236,8 +1254,12 @@ static void _heliostats_by_region( lk::invoke_t &cxt )
             
                 if( cxt.arg(2).hash()->find("offset") != cxt.arg(2).hash()->end() )
                 {
-                    offset_s.push_back( cxt.arg(2).hash()->at("offset")->vec()->at(0).as_string().ToStdString() );
-                    offset_s.push_back( cxt.arg(2).hash()->at("offset")->vec()->at(1).as_string().ToStdString() );
+                    wxString wxname = cxt.arg(2).hash()->at("offset")->vec()->at(0).as_string();
+                    offset_s.push_back( wxname.ToStdString() );
+                    wxname = cxt.arg(2).hash()->at("offset")->vec()->at(1).as_string();
+                    offset_s.push_back( wxname.ToStdString() );
+//                    offset_s.push_back( cxt.arg(2).hash()->at("offset")->vec()->at(0).as_string().ToStdString() );
+//                    offset_s.push_back( cxt.arg(2).hash()->at("offset")->vec()->at(1).as_string().ToStdString() );
                 }
                 else
                 {
