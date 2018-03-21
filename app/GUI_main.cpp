@@ -262,7 +262,7 @@ SPFrame::SPFrame(wxWindow* parent, int id, const wxString& title, const wxPoint&
 
     //Set the version tag
 	_version_major = 1;
-	_version_minor = 1;
+	_version_minor = 2;
 	_version_patch = 0;
 
     _software_version = my_to_string(_version_major) + "." + my_to_string(_version_minor) + "." + my_to_string(_version_patch);
@@ -333,6 +333,13 @@ SPFrame::SPFrame(wxWindow* parent, int id, const wxString& title, const wxPoint&
     _grid_but_size = wxSize(100,25);
     
     _variables.reset();
+#ifdef _DEBUG
+	//if in debug mode, make the default field smaller so that processes run more quickly
+	_variables.sf.q_des.val = 75.;
+	_variables.sf.tht.val = 90.;
+	_variables.sf.des_sim_ndays.val = 2;
+#endif
+
 
     //Create the simulation progress timer and connect it to a timer event
     _sim_timer = new wxTimer(this, wxID_ANY);
@@ -941,6 +948,10 @@ void SPFrame::Save(int save_config)
         {
             file_use = filedlg.GetPath().c_str();
         }
+		else
+		{
+			return;	
+		}
         
     }
     if(! ioutil::saveXMLInputFile((std::string)file_use.GetFullPath(), _variables, _par_data, _opt_data, _software_version) )
@@ -1024,7 +1035,7 @@ void SPFrame::Open(wxString file_in, bool quiet)
         //provided for backward compatibility
         throw spexception("The old solarpilot (non-xml) format input file is no longer supported. Could not open file.");
     }
-    SetCaseName( ioutil::name_only( file.GetFullPath().ToStdString() ) );    //Update the displayed case name 
+    SetCaseName( file.GetFullPath() );    //Update the displayed case name 
 
     //is there data for a solar field layout?
     
@@ -1581,7 +1592,7 @@ void SPFrame::OnMenuRunUserParametric( wxCommandEvent &WXUNUSED(evt) )
 
 void SPFrame::SetCaseName(wxString case_name)
 {
-    SetTitle( "SolarPILOT |  " + case_name );
+    SetTitle( "SolarPILOT " + _software_version + "  |  " + ( case_name.IsEmpty() ? "New file" : case_name) );
 }
 
 void SPFrame::bindControls()
