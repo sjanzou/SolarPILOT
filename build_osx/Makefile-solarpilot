@@ -3,13 +3,13 @@ SSCDIR = ../../ssc
 VPATH = $(SSCDIR)/solarpilot
 
 STDIR = ../../SolTrace/coretrace
-STLIB = $(STDIR)/build_linux/coretrace.a
-SHARELIB = $(SSCDIR)/build_linux/shared.a
+STLIB = $(STDIR)/build_osx/coretrace.a
+SHARELIB = $(SSCDIR)/build_osx/shared.a
 NLOPTDIR = $(SSCDIR)/nlopt
-NLOPTLIB = $(SSCDIR)/build_linux/nlopt.a
+NLOPTLIB = $(SSCDIR)/build_osx/nlopt.a
 
-CC = gcc -mmacosx-version-min=10.9
-CXX = g++ -mmacosx-version-min=10.9
+CC = gcc -mmacosx-version-min=10.11
+CXX = g++ -mmacosx-version-min=10.11
 CFLAGS = -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I$(NLOPTDIR) -I$(STDIR) -I../rapidxml -I$(SSCDIR) -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common
 CXXFLAGS = $(CFLAGS) #$(STLIB) $(SHARELIB) $(NLOPTLIB)  -std=gnu++11
 

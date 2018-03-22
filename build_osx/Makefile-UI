@@ -16,12 +16,18 @@ FCLIB = ./fieldcore.a
 FCDIR = $(SSCDIR)/solarpilot
 NLOPTLIB = $(SHAREDIR)/nlopt.a
 
-CC = gcc -mmacosx-version-min=10.9
-CXX = g++ -mmacosx-version-min=10.9
+CC = gcc -mmacosx-version-min=10.11
+CXX = g++ -mmacosx-version-min=10.11
 CFLAGS = -I. -I$(WEXDIR)/include -I$(LKDIR)/include -I$(SSCDIR) -I../rapidxml -I$(FCDIR) -I$(STDIR) -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags` 
 
 CXXFLAGS = $(CFLAGS) -std=gnu++11
-LDFLAGS =  -v $(WEXLIB) $(LKLIB) $(STLIB) $(FCLIB) $(NLOPTLIB) $(SHAREDLIB)  -std=gnu++11 `wx-config-3 --libs stc` `wx-config-3 --libs aui` `wx-config-3 --libs` -lm  -ldl -lcurl 
+#LDFLAGS =  -v $(WEXLIB) $(LKLIB) $(STLIB) $(FCLIB) $(NLOPTLIB) $(SHAREDLIB)  -std=gnu++11 `wx-config-3 --libs stc` `wx-config-3 --libs aui` `wx-config-3 --libs` -lm  -ldl -lcurl -arch x86_64 
+
+LDFLAGS = -arch x86_64 `wx-config-3 --libs` `wx-config-3 --libs aui` `wx-config-3 --libs stc` `wx-config-3 --libs gl`  $(STLIB) $(FCLIB) $(NLOPTLIB) $(SHAREDLIB) $(WEXLIB) $(LKLIB)  -lcurl -lm
+
+#LDFLAGS =  -v $(WEXLIB) $(LKLIB) $(STLIB) $(FCLIB) $(NLOPTLIB) $(SHAREDLIB)  -std=gnu++11 `wx-config-3 --libs stc` `wx-config-3 --libs aui` `wx-config-3 --libs` -lm  -lcurl 
+#LDFLAGS = -arch x86_64 `wx-config-3 --libs` `wx-config-3 --libs aui` `wx-config-3 --libs stc` `wx-config-3 --libs gl` -lm  $(WEXLIB) $(LKLIB) -lcurl
+
 
 
 OBJECTS  = \

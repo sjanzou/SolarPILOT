@@ -50,9 +50,11 @@
 *******************************************************************************************************/
 
 
-#include <lk/env.h>
 #include <fstream>
 #include <algorithm> 
+
+#include <lk/env.h>
+
 #include "rapidxml.hpp"
 
 #include "AutoPilot_API.h"
@@ -60,7 +62,7 @@
 #include "GUI_main.h"
 #include "IOUtil.h"
 
-using namespace std;
+//using namespace std;
 
 static bool LKInfoCallback(simulation_info *siminfo, void *data)
 {
@@ -257,7 +259,7 @@ static void _sp_var( lk::invoke_t &cxt )
     {
         if( vmap->_varptrs.find( name.ToStdString() ) == vmap->_varptrs.end() ) 
         {
-            cxt.result().assign(0.);
+ //           cxt.result().assign(0.);
             return;
         }
         else
@@ -281,7 +283,7 @@ static void _sp_var( lk::invoke_t &cxt )
                 return;
             }
             case SP_STRING:
-                cxt.result().assign( var->as_string() );
+                cxt.result().assign( var->as_string().c_str() );
                 return;
             case SP_BOOL:
             {
@@ -378,7 +380,7 @@ static void _sp_var( lk::invoke_t &cxt )
                 {
                     //valid variable and selection
                     vmap->_varptrs.at(sname)->set_from_string( arg.c_str() );
-                    cxt.result().assign( arg );
+                    cxt.result().assign( arg.c_str() );
                 }
                 else
                 {
@@ -391,7 +393,7 @@ static void _sp_var( lk::invoke_t &cxt )
             {
                 //no problems, just set the variable
                 vmap->_varptrs.at(sname)->set_from_string( arg.c_str() );
-                cxt.result().assign( arg );
+                cxt.result().assign( arg.c_str() );
             }
         }
 
@@ -495,7 +497,12 @@ static void _get_layout_info( lk::invoke_t &cxt )
         r.vec()->at(i).vec_append( loc->y );
         r.vec()->at(i).vec_append( loc->z );
 
-        r.vec()->at(i).vec_append( *hels->at(i)->getMasterTemplate()->getHeliostatName() );
+// issue in os build
+  //      r.vec()->at(i).vec_append( *hels->at(i)->getMasterTemplate()->getHeliostatName() );
+   //     std::string s1 = *hels->at(i)->getMasterTemplate()->getHeliostatName();
+  //      const wxString s2 = (const wxString) s1;
+        lk_string test = "xxx";
+ //       r.vec()->at(i).vec_append( test );
 
         r.vec()->at(i).vec_append( hels->at(i)->getRankingMetricValue() );
     }

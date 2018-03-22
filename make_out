@@ -1,0 +1,1850 @@
+make -f Makefile-solarpilot -j4
+make[1]: warning: -jN forced in submake: disabling jobserver mode.
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o solpos.o ../../ssc/solarpilot/solpos.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o API_structures.o ../../ssc/solarpilot/API_structures.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o AutoPilot_API.o ../../ssc/solarpilot/AutoPilot_API.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o definitions.o ../../ssc/solarpilot/definitions.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o Financial.o ../../ssc/solarpilot/Financial.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o Flux.o ../../ssc/solarpilot/Flux.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o fluxsim.o ../../ssc/solarpilot/fluxsim.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o heliodata.o ../../ssc/solarpilot/heliodata.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o Heliostat.o ../../ssc/solarpilot/Heliostat.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o interop.o ../../ssc/solarpilot/interop.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o IOUtil.o ../../ssc/solarpilot/IOUtil.cpp
+In file included from ../../ssc/solarpilot/interop.cpp:57:
+In file included from ../../ssc/solarpilot/STObject.h:61:
+../../SolTrace/coretrace/mtrand.h:223:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:224:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *r = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:225:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = 1;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:239:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *p = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:240:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:266:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = 1;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:267:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 j = 0;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:268:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int k = ( N > seedLength ? N : seedLength );
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:312:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const uint32 *t = o.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:313:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:314:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:328:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 s1;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:402:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:403:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *sa = saveArray;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:404:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:411:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:412:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *la = loadArray;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:413:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:421:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const MTRand::uint32 *s = mtrand.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:422:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = mtrand.N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:429:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register MTRand::uint32 *s = mtrand.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:430:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = mtrand.N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:440:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const uint32 *t = o.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:441:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:442:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o Land.o ../../ssc/solarpilot/Land.cpp
+25 warnings generated.
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o LayoutSimulateThread.o ../../ssc/solarpilot/LayoutSimulateThread.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o mod_base.o ../../ssc/solarpilot/mod_base.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o OpticalMesh.o ../../ssc/solarpilot/OpticalMesh.cpp
+../../ssc/solarpilot/LayoutSimulateThread.cpp:196:13: warning: unused variable 'pi' [-Wunused-variable]
+            double pi = PI;
+                   ^
+../../ssc/solarpilot/LayoutSimulateThread.cpp:205:10: warning: unused variable 'Npos' [-Wunused-variable]
+            int Npos = (int)_SF->getHeliostats()->size();
+                ^
+In file included from ../../ssc/solarpilot/LayoutSimulateThread.cpp:50:
+../../ssc/solarpilot/LayoutSimulateThread.h:83:29: warning: private field '_sort_metric' is not used [-Wunused-private-field]
+        int _sim_first, _sim_last, _sort_metric;
+                                   ^
+3 warnings generated.
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o optimize.o ../../ssc/solarpilot/optimize.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o Receiver.o ../../ssc/solarpilot/Receiver.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o Ambient.o ../../ssc/solarpilot/Ambient.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o SolarField.o ../../ssc/solarpilot/SolarField.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o STObject.o ../../ssc/solarpilot/STObject.cpp
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o string_util.o ../../ssc/solarpilot/string_util.cpp
+In file included from ../../ssc/solarpilot/STObject.cpp:56:
+In file included from ../../ssc/solarpilot/STObject.h:61:
+../../SolTrace/coretrace/mtrand.h:223:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:224:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *r = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:225:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = 1;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:239:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *p = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:240:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:266:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = 1;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:267:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 j = 0;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:268:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int k = ( N > seedLength ? N : seedLength );
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:312:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const uint32 *t = o.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:313:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:314:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:328:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 s1;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:402:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:403:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *sa = saveArray;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:404:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:411:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:412:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *la = loadArray;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:413:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:421:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const MTRand::uint32 *s = mtrand.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:422:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = mtrand.N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:429:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register MTRand::uint32 *s = mtrand.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:430:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = mtrand.N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:440:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const uint32 *t = o.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:441:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:442:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o STSimulateThread.o ../../ssc/solarpilot/STSimulateThread.cpp
+../../ssc/solarpilot/STObject.cpp:931:4: warning: unused variable 'npanels' [-Wunused-variable]
+                        npanels = ncantx * ncanty;
+                        ^
+../../ssc/solarpilot/STObject.cpp:1273:9: warning: unused variable 'seed' [-Wunused-variable]
+    int seed = V->flux.seed.val;
+        ^
+g++ -mmacosx-version-min=10.11 -fPIC -Wall -g -O3 -DSP_STANDALONE -I../ -D__64BIT__ -I../../ssc/nlopt -I../../SolTrace/coretrace -I../rapidxml -I../../ssc -std=c++0x -D_GLIBCXX_USE_NANOSLEEP -DWX_PRECOMP -arch x86_64  -fno-common    -c -o Toolbox.o ../../ssc/solarpilot/Toolbox.cpp
+27 warnings generated.
+ar rs fieldcore.a solpos.o API_structures.o AutoPilot_API.o definitions.o Financial.o Flux.o fluxsim.o heliodata.o Heliostat.o interop.o IOUtil.o Land.o LayoutSimulateThread.o mod_base.o OpticalMesh.o optimize.o Receiver.o Ambient.o SolarField.o STObject.o string_util.o STSimulateThread.o Toolbox.o 
+ar: creating archive fieldcore.a
+make -f Makefile-UI -j4
+make[1]: warning: -jN forced in submake: disabling jobserver mode.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o FieldPlot.o ../app/FieldPlot.cpp
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o FluxPlot.o ../app/FluxPlot.cpp
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o gui_about_dialog.o ../app/gui_about_dialog.cpp
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o GUI_ClimatePage.o ../app/GUI_ClimatePage.cpp
+In file included from ../app/FluxPlot.cpp:55:
+In file included from ../app/FluxPlot.h:56:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+In file included from ../app/gui_about_dialog.cpp:52:
+In file included from ../app/gui_about_dialog.h:56:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+In file included from ../app/FieldPlot.cpp:58:
+In file included from ../app/FieldPlot.h:56:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+In file included from ../app/GUI_ClimatePage.cpp:56:
+In file included from ../app/GUI_main.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+../app/FluxPlot.cpp:187:19: warning: implicit conversion of NULL constant to 'double' [-Wnull-conversion]
+    double xaxmin=NULL, xaxmax=NULL, xaxcent;
+           ~~~~~~ ^~~~
+                  0.0
+../app/FluxPlot.cpp:187:32: warning: implicit conversion of NULL constant to 'double' [-Wnull-conversion]
+    double xaxmin=NULL, xaxmax=NULL, xaxcent;
+                        ~~~~~~ ^~~~
+                               0.0
+../app/GUI_ClimatePage.cpp:431:12: warning: 15 enumeration values not handled in switch: 'wxOS_UNKNOWN', 'wxOS_MAC_OS', 'wxOS_MAC_OSX_DARWIN'... [-Wswitch]
+    switch(P.GetOperatingSystemId())
+           ^
+../app/GUI_ClimatePage.cpp:431:12: note: add missing switch cases
+    switch(P.GetOperatingSystemId())
+           ^
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o GUI_CostPage.o ../app/GUI_CostPage.cpp
+3 warnings generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o GUI_HeliostatPage.o ../app/GUI_HeliostatPage.cpp
+In file included from ../app/GUI_CostPage.cpp:53:
+In file included from ../app/GUI_main.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o GUI_LayoutPage.o ../app/GUI_LayoutPage.cpp
+../app/GUI_CostPage.cpp:92:18: warning: expression result unused [-Wunused-value]
+    sbs0gs->Add((1,1),0,0,0);
+                 ^
+../app/GUI_CostPage.cpp:96:18: warning: expression result unused [-Wunused-value]
+    sbs0gs->Add((1,1),0,0,0);
+                 ^
+../app/GUI_CostPage.cpp:98:18: warning: expression result unused [-Wunused-value]
+    sbs0gs->Add((1,1),0,0,0);
+                 ^
+../app/GUI_CostPage.cpp:102:18: warning: expression result unused [-Wunused-value]
+    sbs0gs->Add((1,1),0,0,0);
+                 ^
+../app/GUI_CostPage.cpp:109:18: warning: expression result unused [-Wunused-value]
+    sbs0gs->Add((1,1),0,0,0);
+                 ^
+../app/GUI_CostPage.cpp:136:18: warning: expression result unused [-Wunused-value]
+    sbs1gs->Add((1,1), 0, 0, 0);
+                 ^
+../app/GUI_CostPage.cpp:140:18: warning: expression result unused [-Wunused-value]
+    sbs1gs->Add((1,1), 0, 0, 0);
+                 ^
+../app/GUI_CostPage.cpp:147:18: warning: expression result unused [-Wunused-value]
+    sbs1gs->Add((1,1), 0, 0, 0);
+                 ^
+2 warnings generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o GUI_LayoutSimulationPage.o ../app/GUI_LayoutSimulationPage.cpp
+In file included from ../app/GUI_HeliostatPage.cpp:53:
+In file included from ../app/GUI_main.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+../app/GUI_HeliostatPage.cpp:321:18: warning: expression result unused [-Wunused-value]
+    cp4_gs->Add((1,1), 0, 0, 0);
+                 ^
+9 warnings generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o GUI_main.o ../app/GUI_main.cpp
+In file included from ../app/GUI_LayoutPage.cpp:53:
+In file included from ../app/GUI_main.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+In file included from ../app/GUI_LayoutSimulationPage.cpp:53:
+In file included from ../app/GUI_main.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+../app/GUI_LayoutPage.cpp:229:21: warning: expression result unused [-Wunused-value]
+    b_sizer_1->Add((15,15), 0, 0, 0);    //space
+                    ^~
+../app/GUI_LayoutPage.cpp:297:28: warning: expression result unused [-Wunused-value]
+    design_top_sizer->Add((45,20), 0, 0, 0);
+                           ^~
+../app/GUI_LayoutSimulationPage.cpp:92:21: warning: expression result unused [-Wunused-value]
+    sim_sizer->Add((1,15),0,0,0);
+                    ^
+../app/GUI_LayoutSimulationPage.cpp:94:21: warning: expression result unused [-Wunused-value]
+    sim_sizer->Add((1,15),0,0,0);
+                    ^
+In file included from ../app/GUI_main.cpp:85:
+In file included from ../../ssc/solarpilot/STObject.h:61:
+../../SolTrace/coretrace/mtrand.h:223:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:224:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *r = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:225:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = 1;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:239:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *p = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:240:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:266:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = 1;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:267:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 j = 0;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:268:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int k = ( N > seedLength ? N : seedLength );
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:312:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const uint32 *t = o.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:313:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:314:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:328:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 s1;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:402:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:403:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *sa = saveArray;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:404:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:411:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:412:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *la = loadArray;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:413:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:421:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const MTRand::uint32 *s = mtrand.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:422:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = mtrand.N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:429:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register MTRand::uint32 *s = mtrand.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:430:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = mtrand.N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:440:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const uint32 *t = o.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:441:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:442:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+In file included from ../app/GUI_main.cpp:90:
+In file included from ../app/GUI_main.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+../app/GUI_main.cpp:1433:12: warning: 14 enumeration values not handled in switch: 'wxOS_UNKNOWN', 'wxOS_MAC_OS', 'wxOS_MAC_OSX_DARWIN'... [-Wswitch]
+    switch(P.GetOperatingSystemId())
+           ^
+../app/GUI_main.cpp:1433:12: note: add missing switch cases
+    switch(P.GetOperatingSystemId())
+           ^
+3 warnings generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o GUI_MarketPage.o ../app/GUI_MarketPage.cpp
+3 warnings generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o GUI_OptimizationPage.o ../app/GUI_OptimizationPage.cpp
+2 warnings generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o GUI_ParametricSimulationPage.o ../app/GUI_ParametricSimulationPage.cpp
+In file included from ../app/GUI_MarketPage.cpp:53:
+In file included from ../app/GUI_main.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+In file included from ../app/GUI_OptimizationPage.cpp:53:
+In file included from ../app/GUI_main.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+In file included from ../app/GUI_ParametricSimulationPage.cpp:53:
+In file included from ../app/GUI_main.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o GUI_PerformanceSimulationPage.o ../app/GUI_PerformanceSimulationPage.cpp
+../app/GUI_ParametricSimulationPage.cpp:1014:20: warning: 14 enumeration values not handled in switch: 'wxOS_UNKNOWN', 'wxOS_MAC_OS', 'wxOS_MAC_OSX_DARWIN'... [-Wswitch]
+            switch(P.GetOperatingSystemId())
+                   ^
+../app/GUI_ParametricSimulationPage.cpp:1014:20: note: add missing switch cases
+            switch(P.GetOperatingSystemId())
+                   ^
+In file included from ../app/GUI_PerformanceSimulationPage.cpp:53:
+In file included from ../app/GUI_main.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+In file included from ../app/GUI_PerformanceSimulationPage.cpp:55:
+In file included from ../../ssc/solarpilot/STObject.h:61:
+../../SolTrace/coretrace/mtrand.h:223:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:224:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *r = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:225:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = 1;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:239:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *p = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:240:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:266:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = 1;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:267:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 j = 0;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:268:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int k = ( N > seedLength ? N : seedLength );
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:312:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const uint32 *t = o.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:313:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:314:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:328:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 s1;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:402:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:403:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *sa = saveArray;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:404:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:411:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:412:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *la = loadArray;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:413:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:421:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const MTRand::uint32 *s = mtrand.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:422:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = mtrand.N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:429:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register MTRand::uint32 *s = mtrand.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:430:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = mtrand.N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:440:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const uint32 *t = o.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:441:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:442:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../app/GUI_PerformanceSimulationPage.cpp:163:21: warning: expression result unused [-Wunused-value]
+    top_sizer->Add((25,1), 0, 0, 0);
+                    ^~
+../app/GUI_PerformanceSimulationPage.cpp:165:21: warning: expression result unused [-Wunused-value]
+    top_sizer->Add((25,1), 0, 0, 0);
+                    ^~
+../app/GUI_PerformanceSimulationPage.cpp:320:16: warning: expression result unused [-Wunused-value]
+    col2->Add((30,1),0,0,0);
+               ^~
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o GUI_PlotFieldPage.o ../app/GUI_PlotFieldPage.cpp
+27 warnings generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o GUI_PlotFluxPage.o ../app/GUI_PlotFluxPage.cpp
+In file included from ../app/GUI_PlotFieldPage.cpp:53:
+In file included from ../app/GUI_main.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+29 warnings generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o GUI_ReceiverPage.o ../app/GUI_ReceiverPage.cpp
+../app/GUI_PlotFieldPage.cpp:159:18: warning: expression result unused [-Wunused-value]
+        top_sizer->Add((1,30), 0, 0, 0);
+                        ^
+In file included from ../app/GUI_PlotFluxPage.cpp:53:
+In file included from ../app/GUI_main.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+2 warnings generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o GUI_ResultsPage.o ../app/GUI_ResultsPage.cpp
+In file included from ../app/GUI_PlotFluxPage.cpp:55:
+In file included from ../../ssc/solarpilot/STObject.h:61:
+../../SolTrace/coretrace/mtrand.h:223:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:224:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *r = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:225:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = 1;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:239:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *p = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:240:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:266:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = 1;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:267:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 j = 0;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:268:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int k = ( N > seedLength ? N : seedLength );
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:312:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const uint32 *t = o.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:313:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:314:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:328:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 s1;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:402:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:403:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *sa = saveArray;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:404:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:411:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:412:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *la = loadArray;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:413:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:421:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const MTRand::uint32 *s = mtrand.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:422:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = mtrand.N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:429:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register MTRand::uint32 *s = mtrand.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:430:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = mtrand.N;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:440:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register const uint32 *t = o.state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:441:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register uint32 *s = state;
+        ^~~~~~~~~
+../../SolTrace/coretrace/mtrand.h:442:2: warning: 'register' storage class specifier is deprecated and incompatible with C++1z [-Wdeprecated-register]
+        register int i = N;
+        ^~~~~~~~~
+../app/GUI_PlotFluxPage.cpp:179:21: warning: expression result unused [-Wunused-value]
+    top_sizer->Add((1,30), 0, 0, 0);
+                    ^
+In file included from ../app/GUI_ReceiverPage.cpp:53:
+In file included from ../app/GUI_main.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+In file included from ../app/GUI_ResultsPage.cpp:53:
+In file included from ../app/GUI_main.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+2 warnings generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o GUI_SimulationsPage.o ../app/GUI_SimulationsPage.cpp
+27 warnings generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o gui_util.o ../app/gui_util.cpp
+../app/GUI_ResultsPage.cpp:171:9: warning: expression result unused [-Wunused-value]
+        throwflag;
+        ^~~~~~~~~
+In file included from ../app/GUI_SimulationsPage.cpp:53:
+In file included from ../app/GUI_main.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+2 warnings generated.
+In file included from ../app/gui_util.cpp:54:
+In file included from ../app/gui_util.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o ImageCanvas.o ../app/ImageCanvas.cpp
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o InputControl.o ../app/InputControl.cpp
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o OutputControl.o ../app/OutputControl.cpp
+In file included from ../app/ImageCanvas.cpp:53:
+In file included from ../app/ImageCanvas.h:56:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o kml_select_dialog.o ../app/kml_select_dialog.cpp
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o layout_sim_export_dialog.o ../app/layout_sim_export_dialog.cpp
+In file included from ../app/InputControl.cpp:53:
+In file included from ../app/InputControl.h:58:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+In file included from ../app/OutputControl.cpp:53:
+In file included from ../app/OutputControl.h:56:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+In file included from ../app/kml_select_dialog.cpp:53:
+In file included from ../app/kml_select_dialog.h:56:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+In file included from ../app/layout_sim_export_dialog.cpp:53:
+In file included from ../app/layout_sim_export_dialog.h:56:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o numericvareditform.o ../app/numericvareditform.cpp
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o pagepanel.o ../app/pagepanel.cpp
+1 warning generated.
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o param_dialog.o ../app/param_dialog.cpp
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o par_edit_ctrls.o ../app/par_edit_ctrls.cpp
+In file included from ../app/numericvareditform.cpp:53:
+In file included from ../app/numericvareditform.h:56:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+In file included from ../app/pagepanel.cpp:53:
+In file included from ../app/pagepanel.h:56:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+../app/pagepanel.cpp:312:41: warning: implicit conversion from 'double' to 'ChannelType' (aka 'unsigned char') changes value from 0.6 to 0 [-Wliteral-conversion]
+        dc.SetPen( wxPen(wxColour(0,0,0,0.6), 4, wxPenStyle::wxPENSTYLE_SOLID) );
+                         ~~~~~~~~       ^~~
+In file included from ../app/param_dialog.cpp:53:
+In file included from ../app/param_dialog.h:58:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+In file included from ../app/par_edit_ctrls.cpp:53:
+In file included from ../app/par_edit_ctrls.h:56:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o plot_base.o ../app/plot_base.cpp
+2 warnings generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o plot_contourf.o ../app/plot_contourf.cpp
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o plot_scatter.o ../app/plot_scatter.cpp
+In file included from ../app/plot_base.cpp:53:
+In file included from ../app/plot_base.h:56:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o rec_select_dialog.o ../app/rec_select_dialog.cpp
+In file included from ../app/plot_contourf.cpp:53:
+In file included from ../app/plot_contourf.h:56:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o sandbox.o ../app/sandbox.cpp
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o settings_dialog.o ../app/settings_dialog.cpp
+In file included from ../app/plot_scatter.cpp:53:
+In file included from ../app/plot_scatter.h:56:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o rename_dialog.o ../app/rename_dialog.cpp
+In file included from ../app/rec_select_dialog.cpp:53:
+In file included from ../app/rec_select_dialog.h:56:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o parse_kml.o ../app/parse_kml.cpp
+In file included from ../app/settings_dialog.cpp:53:
+In file included from ../app/settings_dialog.h:56:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+1 warning generated.
+g++ -mmacosx-version-min=10.11 -I. -I../../wex/include -I../../lk/include -I../../ssc -I../rapidxml -I../../ssc/solarpilot -I../../SolTrace/coretrace -D__64BIT__ -g -O3 -DWX_PRECOMP -arch x86_64  -fno-common -DSP_STANDALONE -D_GLIBCXX_USE_NANOSLEEP `wx-config-3 --cflags`  -std=gnu++11   -c -o scripting.o ../app/scripting.cpp
+In file included from ../app/rename_dialog.cpp:53:
+In file included from ../app/rename_dialog.h:56:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+1 warning generated.
+1 warning generated.
+In file included from ../app/parse_kml.cpp:59:
+In file included from ../app/parse_kml.h:62:
+In file included from ../app/gui_util.h:59:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+In file included from ../app/scripting.cpp:61:
+In file included from ../app/scripting.h:57:
+In file included from ../../wex/include/wex/lkscript.h:28:
+In file included from /Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/wx.h:81:
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/textctrl.h:749:18: warning: 'OnDynamicBind' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& entry);
+                 ^
+/Users/imacuser/local/wx-3.1.0/include/wx-3.1/wx/event.h:3678:18: note: overridden virtual function is here
+    virtual bool OnDynamicBind(wxDynamicEventTableEntry& WXUNUSED(entry))
+                 ^
+1 warning generated.
+../app/scripting.cpp:1140:29: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+                            else
+                            ^
+../app/scripting.cpp:1184:37: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+                                    else
+                                    ^
+../app/scripting.cpp:1211:17: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+                else
+                ^
+4 warnings generated.
+g++ -mmacosx-version-min=10.11 -g -o solarpilot FieldPlot.o FluxPlot.o gui_about_dialog.o GUI_ClimatePage.o GUI_CostPage.o GUI_HeliostatPage.o GUI_LayoutPage.o GUI_LayoutSimulationPage.o GUI_main.o GUI_MarketPage.o GUI_OptimizationPage.o GUI_ParametricSimulationPage.o GUI_PerformanceSimulationPage.o GUI_PlotFieldPage.o GUI_PlotFluxPage.o GUI_ReceiverPage.o GUI_ResultsPage.o GUI_SimulationsPage.o gui_util.o ImageCanvas.o InputControl.o OutputControl.o kml_select_dialog.o layout_sim_export_dialog.o numericvareditform.o pagepanel.o param_dialog.o par_edit_ctrls.o plot_base.o plot_contourf.o plot_scatter.o rec_select_dialog.o sandbox.o settings_dialog.o rename_dialog.o parse_kml.o scripting.o -arch x86_64 `wx-config-3 --libs` `wx-config-3 --libs aui` `wx-config-3 --libs stc` `wx-config-3 --libs gl` -lm  ../../wex/wexosxwx3.a ../../lk/lkosxwx3.a -lcurl
+Undefined symbols for architecture x86_64:
+  "lower_case(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+      SPFrame::OnClimateSearchText(wxCommandEvent&) in GUI_ClimatePage.o
+      SPFrame::OnBoundsEdit(wxGridEvent&) in GUI_LayoutPage.o
+      SPFrame::BoundsImport() in GUI_LayoutPage.o
+      SPFrame::OnLayoutImport(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::AddRecentFile(wxFileName&) in GUI_main.o
+      SPFrame::OnOptimizeGridChange(wxGridEvent&) in GUI_OptimizationPage.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      ...
+  "to_integer(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int*)", referenced from:
+      SPFrame::CreateMasterHeliostatPage(wxScrolledWindow*) in GUI_HeliostatPage.o
+      spvar<int>::set_from_string(char const*) in GUI_HeliostatPage.o
+      spvar<int>::combo_select(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) in GUI_HeliostatPage.o
+      spvar<int>::combo_select_by_choice_index(int) in GUI_HeliostatPage.o
+      spvar<int>::combo_select_by_mapval(int) in GUI_HeliostatPage.o
+      SPFrame::SPFrame(wxWindow*, int, wxString const&, wxPoint const&, wxSize const&, long) in GUI_main.o
+      SPFrame::OnToolsSettings(wxCommandEvent&) in GUI_main.o
+      ...
+  "join(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+      SPFrame::OnUserParVariables(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      _add_land(lk::invoke_t&) in scripting.o
+  "split(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool, bool)", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      SPFrame::OnSunImport(wxCommandEvent&) in GUI_ClimatePage.o
+      SPFrame::BoundsImport() in GUI_LayoutPage.o
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::vector<std::__1::vector<sp_point, std::__1::allocator<sp_point> >, std::__1::allocator<std::__1::vector<sp_point, std::__1::allocator<sp_point> > > >&) in GUI_LayoutPage.o
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, WeatherData&) in GUI_LayoutPage.o
+      SPFrame::OnLayoutImport(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::OnLayoutExport(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      ...
+  "to_bool(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool&)", referenced from:
+      spvar<bool>::set_from_string(char const*) in GUI_HeliostatPage.o
+      spvar<bool>::combo_select(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) in GUI_HeliostatPage.o
+      spvar<bool>::combo_select_by_choice_index(int) in GUI_HeliostatPage.o
+      spvar<bool>::combo_select_by_mapval(int) in GUI_HeliostatPage.o
+      spvar<bool>::set_from_string(char const*) in GUI_main.o
+      spvar<bool>::combo_select(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) in GUI_main.o
+      spvar<bool>::combo_select_by_choice_index(int) in GUI_main.o
+      ...
+  "to_double(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, double*)", referenced from:
+      SPFrame::OnSunImport(wxCommandEvent&) in GUI_ClimatePage.o
+      SPFrame::OnAttenFocus(wxFocusEvent&) in GUI_ClimatePage.o
+      spvar<double>::set_from_string(char const*) in GUI_HeliostatPage.o
+      spvar<double>::combo_select(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) in GUI_HeliostatPage.o
+      spvar<double>::combo_select_by_choice_index(int) in GUI_HeliostatPage.o
+      spvar<double>::combo_select_by_mapval(int) in GUI_HeliostatPage.o
+      spout<double>::set_from_string(char const*) in GUI_HeliostatPage.o
+      ...
+  "to_string(double, char const*)", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      SPFrame::setHelioTemplateGrid() in GUI_HeliostatPage.o
+      SPFrame::UpdateDesignSelect(int, var_map&) in GUI_LayoutPage.o
+      SPFrame::UpdateLayoutGrid() in GUI_LayoutSimulationPage.o
+      SPFrame::CreateParametricsTable(parametric&, std::__1::vector<sim_result, std::__1::allocator<sim_result> >&, grid_emulator&) in GUI_main.o
+      gui_util::FormatWithCommas(double, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) in gui_util.o
+      gui_util::FormatAsCurrency(double) in gui_util.o
+      ...
+  "to_string(int, char const*)", referenced from:
+      SPFrame::CreateParametricsTable(parametric&, std::__1::vector<sim_result, std::__1::allocator<sim_result> >&, grid_emulator&) in GUI_main.o
+      gui_util::FormatWithCommas(int) in gui_util.o
+  "SolarField::FieldLayout()", referenced from:
+      SPFrame::OnLayoutImport(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "SolarField::getReceivers()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      FluxPlot::SaveDataTable(wxString&, wxString&) in FluxPlot.o
+      FluxPlot::DoPaint(wxDC&) in FluxPlot.o
+      SPFrame::UpdateFluxPlotSelections() in GUI_main.o
+      SPFrame::SolTraceFluxBinning(SolarField&) in GUI_main.o
+      SPFrame::SAMInputParametric2() in GUI_main.o
+      SPFrame::CreateFluxPlotPage(wxScrolledWindow*) in GUI_PlotFluxPage.o
+      ...
+  "SolarField::getFluxObject()", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "SolarField::getHeliostats()", referenced from:
+      FieldPlot::SetPlotData(SolarField&, int) in FieldPlot.o
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      SPFrame::UpdateLayoutGrid() in GUI_LayoutSimulationPage.o
+      SPFrame::HermiteFluxSimulationHandler(SolarField&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+      SPFrame::SAMInputParametric2() in GUI_main.o
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      ...
+  "SolarField::getLandObject()", referenced from:
+      FieldPlot::SetPlotData(SolarField&, int) in FieldPlot.o
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "SolarField::getPlotBounds(bool)", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+  "SolarField::CancelSimulation()", referenced from:
+      SPFrame::OnDoLayout(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::OnParametricSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SPFrame::OnDoPerformanceSimulation(wxCommandEvent&) in GUI_PerformanceSimulationPage.o
+  "SolarField::getSimInfoObject()", referenced from:
+      SPFrame::OnDoLayout(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::StartSimTimer() in GUI_LayoutSimulationPage.o
+      SPFrame::SPFrame(wxWindow*, int, wxString const&, wxPoint const&, wxSize const&, long) in GUI_main.o
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SolarPILOTScriptWindow::SolarPILOTScriptWindow(wxWindow*, int) in scripting.o
+      _simulate(lk::invoke_t&) in scripting.o
+      ...
+  "SolarField::CheckCancelStatus()", referenced from:
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+  "SolarField::calcHeliostatArea()", referenced from:
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+  "SolarField::getHeliostatsByID()", referenced from:
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SPFrame::GetSelectedHeliostats(std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&, bool) in GUI_PerformanceSimulationPage.o
+      _detail_results(lk::invoke_t&) in scripting.o
+      _modify_heliostats(lk::invoke_t&) in scripting.o
+  "SolarField::getSimErrorObject()", referenced from:
+      SPFrame::OnDoLayout(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::SPFrame(wxWindow*, int, wxString const&, wxPoint const&, wxSize const&, long) in GUI_main.o
+  "SolarField::PrepareFieldLayout(SolarField&, WeatherData*, bool)", referenced from:
+      SPFrame::OnLayoutRefresh(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::Open(wxString, bool) in GUI_main.o
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      _modify_heliostats(lk::invoke_t&) in scripting.o
+  "SolarField::getOpticalHashTree()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+  "SolarField::ProcessLayoutResults(std::__1::vector<sim_result, std::__1::allocator<sim_result> >*, int)", referenced from:
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "SolarField::calcHeliostatShadows(Vect&)", referenced from:
+      SPFrame::Open(wxString, bool) in GUI_main.o
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+      SPFrame::DoPerformanceSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+      _simulate(lk::invoke_t&) in scripting.o
+  "SolarField::getLayoutShellObject()", referenced from:
+      _modify_heliostats(lk::invoke_t&) in scripting.o
+  "SolarField::HermiteFluxSimulation(std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&, bool)", referenced from:
+      SPFrame::HermiteFluxSimulationHandler(SolarField&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+      SPFrame::SAMInputParametric2() in GUI_main.o
+  "SolarField::getHeliostatTemplates()", referenced from:
+      FieldPlot::SetPlotData(SolarField&, int) in FieldPlot.o
+  "SolarField::updateAllTrackVectors(Vect&)", referenced from:
+      SPFrame::OnLayoutImport(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::OnLayoutRefresh(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+  "SolarField::getActiveReceiverCount()", referenced from:
+      SPFrame::SAMInputParametric2() in GUI_main.o
+  "SolarField::CalcDesignPtSunPosition(int, double&, double&)", referenced from:
+      SPFrame::OnDoLayout(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::OnLayoutImport(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::OnLayoutRefresh(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::Open(wxString, bool) in GUI_main.o
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SPFrame::LayoutSimulationExport(SolarField&, wxString&, std::__1::vector<bool, std::__1::allocator<bool> >&, wxString&, wxString&, bool) in GUI_PlotFieldPage.o
+      ...
+  "SolarField::UpdateLayoutAfterChange()", referenced from:
+      SPFrame::OnDeleteSelectedHeliostats(wxCommandEvent&) in GUI_PlotFieldPage.o
+      SPFrame::OnRestoreSelectedHeliostats(wxCommandEvent&) in GUI_PlotFieldPage.o
+  "SolarField::AnnualEfficiencySimulation(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, SolarField*, std::__1::vector<sim_result, std::__1::allocator<sim_result> >&)", referenced from:
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "SolarField::calcNumRequiredSimulations()", referenced from:
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "SolarField::updateAllCalculatedParameters(var_map&)", referenced from:
+      SPFrame::UpdateCalculatedGUIValues() in GUI_main.o
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::OnApplyOptimizationResult(wxCommandEvent&) in GUI_OptimizationPage.o
+  "SolarField::Clean()", referenced from:
+      SPFrame::OnClose(wxCloseEvent&) in GUI_main.o
+      SPFrame::CloseProject() in GUI_main.o
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::OnParametricSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      _generate_layout(lk::invoke_t&) in scripting.o
+  "SolarField::Create(var_map&)", referenced from:
+      SPFrame::OnHeliotempAdd(wxCommandEvent&) in GUI_HeliostatPage.o
+      SPFrame::OnHeliotempDel(wxCommandEvent&) in GUI_HeliostatPage.o
+      SPFrame::OnDoLayout(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::OnLayoutImport(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::OnLayoutRefresh(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::SPFrame(wxWindow*, int, wxString const&, wxPoint const&, wxSize const&, long) in GUI_main.o
+      SPFrame::Open(wxString, bool) in GUI_main.o
+      ...
+  "SolarField::ErrCheck()", referenced from:
+      SPFrame::OnDoLayout(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::OnLayoutImport(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::OnLayoutRefresh(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+      SPFrame::DoPerformanceSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      ...
+  "SolarField::Simulate(double, double, sim_params&)", referenced from:
+      SPFrame::SAMInputParametric2() in GUI_main.o
+  "SolarField::getVarMap()", referenced from:
+      FieldPlot::SetPlotData(SolarField&, int) in FieldPlot.o
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      SPFrame::UpdateFieldPlotSelections() in GUI_main.o
+      SPFrame::HermiteFluxSimulationHandler(SolarField&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+      SPFrame::SAMInputParametric2() in GUI_main.o
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+      SPFrame::DoPerformanceSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+      ...
+  "SolarField::SolarField(SolarField const&)", referenced from:
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "SolarField::SolarField()", referenced from:
+      SPFrame::SPFrame(wxWindow*, int, wxString const&, wxPoint const&, wxSize const&, long) in GUI_main.o
+  "SolarField::~SolarField()", referenced from:
+      SPFrame::SPFrame(wxWindow*, int, wxString const&, wxPoint const&, wxSize const&, long) in GUI_main.o
+      SPFrame::~SPFrame() in GUI_main.o
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "parametric::SetWeatherFileList(ArrayString&)", referenced from:
+      SPFrame::OnParAddVar(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+  "parametric::parametric()", referenced from:
+      SPFrame::SPFrame(wxWindow*, int, wxString const&, wxPoint const&, wxSize const&, long) in GUI_main.o
+  "sim_params::sim_params()", referenced from:
+      SPFrame::SAMInputParametric2() in GUI_main.o
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "sim_result::process_flux(SolarField*, bool)", referenced from:
+      SPFrame::SAMInputParametric2() in GUI_main.o
+  "sim_result::process_raytrace_simulation(SolarField&, int, double*, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&, double, int*, int*, int*, int, double*)", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+      SPFrame::OnFluxPlotBinChange(int) in GUI_PlotFluxPage.o
+  "sim_result::process_analytical_simulation(SolarField&, int, double*)", referenced from:
+      SPFrame::OnDoLayout(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::SAMInputParametric2() in GUI_main.o
+  "sim_result::process_analytical_simulation(SolarField&, int, double*, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&)", referenced from:
+      SPFrame::HermiteFluxSimulationHandler(SolarField&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "sim_result::sim_result()", referenced from:
+      std::__1::vector<sim_result, std::__1::allocator<sim_result> >::__append(unsigned long) in GUI_LayoutSimulationPage.o
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      std::__1::vector<sim_result, std::__1::allocator<sim_result> >::__append(unsigned long) in GUI_main.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      std::__1::vector<sim_result, std::__1::allocator<sim_result> >::__append(unsigned long) in GUI_PerformanceSimulationPage.o
+      std::__1::vector<sim_result, std::__1::allocator<sim_result> >::__append(unsigned long) in scripting.o
+  "ArrayString::at(int)", referenced from:
+      SPFrame::OnChangeClimateFile(wxListEvent&) in GUI_ClimatePage.o
+      SPFrame::OnClimateSearchText(wxCommandEvent&) in GUI_ClimatePage.o
+      SPFrame::LoadClimateFiles() in GUI_ClimatePage.o
+      SPFrame::UpdateClimateListValues() in GUI_ClimatePage.o
+      SPFrame::UpdateClimateFile(wxString&, var_map&, bool) in GUI_ClimatePage.o
+      spApp::OnInit() in GUI_main.o
+      SPFrame::OnDoOptimizationSimulation(wxCommandEvent&) in GUI_OptimizationPage.o
+      ...
+  "ArrayString::Add(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >)", referenced from:
+      SPFrame::ParCheckSetup(parametric&, var_map&) in GUI_ParametricSimulationPage.o
+  "ArrayString::back()", referenced from:
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+  "ArrayString::size()", referenced from:
+      SPFrame::OnClimateSearchText(wxCommandEvent&) in GUI_ClimatePage.o
+      SPFrame::LoadClimateFiles() in GUI_ClimatePage.o
+      SPFrame::UpdateClimateListValues() in GUI_ClimatePage.o
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      spApp::OnInit() in GUI_main.o
+      SPFrame::OnDoOptimizationSimulation(wxCommandEvent&) in GUI_OptimizationPage.o
+      SPFrame::OptReloadVariableList() in GUI_OptimizationPage.o
+      ...
+  "ArrayString::Clear()", referenced from:
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::OnParEditVar(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+  "ArrayString::Index(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >)", referenced from:
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SPFrame::ParCheckSetup(ArrayString&, var_map&) in GUI_ParametricSimulationPage.o
+  "ArrayString::clear()", referenced from:
+      SPFrame::OnClimateSearchText(wxCommandEvent&) in GUI_ClimatePage.o
+      SPFrame::LoadClimateFiles() in GUI_ClimatePage.o
+      gui_util::list_files(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, ArrayString&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) in gui_util.o
+  "ArrayString::resize(int)", referenced from:
+      SPFrame::UpdateClimateFile(wxString&, var_map&, bool) in GUI_ClimatePage.o
+      SPFrame::OptReloadVariableList() in GUI_OptimizationPage.o
+  "ArrayString::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >)", referenced from:
+      SPFrame::OnClimateSearchText(wxCommandEvent&) in GUI_ClimatePage.o
+      SPFrame::LoadClimateFiles() in GUI_ClimatePage.o
+      SPFrame::OnTempBoundsEdit(wxCommandEvent&) in GUI_HeliostatPage.o
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      spApp::OnInit() in GUI_main.o
+      SPFrame::OnParEditVar(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      ...
+  "ArrayString::ArrayString()", referenced from:
+      SPFrame::OnTempBoundsEdit(wxCommandEvent&) in GUI_HeliostatPage.o
+      SPFrame::SPFrame(wxWindow*, int, wxString const&, wxPoint const&, wxSize const&, long) in GUI_main.o
+      spApp::OnInit() in GUI_main.o
+      SPFrame::OnParAddVar(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SPFrame::ParCheckSetup(parametric&, var_map&) in GUI_ParametricSimulationPage.o
+      SPFrame::SyncParValuesTable() in GUI_ParametricSimulationPage.o
+      ...
+  "ArrayString::operator[](int)", referenced from:
+      SPFrame::OnTempBoundsEdit(wxCommandEvent&) in GUI_HeliostatPage.o
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::CreateParametricsTable(parametric&, std::__1::vector<sim_result, std::__1::allocator<sim_result> >&, grid_emulator&) in GUI_main.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SPFrame::ParRefreshValuesList() in GUI_ParametricSimulationPage.o
+      wxArrayStr::wxArrayStr(ArrayString&) in gui_util.o
+  "FluxSurface::getFluxMap()", referenced from:
+      FluxPlot::SaveDataTable(wxString&, wxString&) in FluxPlot.o
+      FluxPlot::DoPaint(wxDC&) in FluxPlot.o
+      SPFrame::SolTraceFluxBinning(SolarField&) in GUI_main.o
+      SPFrame::SAMInputParametric2() in GUI_main.o
+      _get_fluxmap(lk::invoke_t&) in scripting.o
+  "FluxSurface::ClearFluxGrid()", referenced from:
+      SPFrame::SolTraceFluxBinning(SolarField&) in GUI_main.o
+  "FluxSurface::getSurfaceWidth()", referenced from:
+      FluxPlot::DoPaint(wxDC&) in FluxPlot.o
+  "FluxSurface::getFluxNX()", referenced from:
+      FluxPlot::SaveDataTable(wxString&, wxString&) in FluxPlot.o
+      FluxPlot::DoPaint(wxDC&) in FluxPlot.o
+      SPFrame::SolTraceFluxBinning(SolarField&) in GUI_main.o
+      SPFrame::SAMInputParametric2() in GUI_main.o
+      SPFrame::OnFluxPlotBinChange(int) in GUI_PlotFluxPage.o
+  "FluxSurface::getFluxNY()", referenced from:
+      FluxPlot::SaveDataTable(wxString&, wxString&) in FluxPlot.o
+      FluxPlot::DoPaint(wxDC&) in FluxPlot.o
+      SPFrame::SolTraceFluxBinning(SolarField&) in GUI_main.o
+      SPFrame::SAMInputParametric2() in GUI_main.o
+      SPFrame::OnFluxPlotBinChange(int) in GUI_PlotFluxPage.o
+  "STSimThread::IsFinished()", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "STSimThread::CancelTrace()", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "STSimThread::StartThread()", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "STSimThread::GetContextId()", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "STSimThread::GetResultCode()", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "STSimThread::CopyStageRayData(std::__1::vector<std::__1::vector<double, std::__1::allocator<double> >, std::__1::allocator<std::__1::vector<double, std::__1::allocator<double> > > >&, int, int, int)", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "STSimThread::GetStage0RayDataObject()", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "STSimThread::GetStage1RayDataObject()", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "STSimThread::Setup(void*, int, int, bool, bool)", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "STSimThread::GetStatus(int*, int*, int*, int*, int*)", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "STSimThread::~STSimThread()", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "WeatherData::getEntryPointers()", referenced from:
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, WeatherData&) in GUI_LayoutPage.o
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, WeatherData&) in GUI_main.o
+      spbase::_as_str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, WeatherData&) in GUI_main.o
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, WeatherData&) in GUI_OptimizationPage.o
+      spbase::_as_str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, WeatherData&) in GUI_OptimizationPage.o
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, WeatherData&) in GUI_ParametricSimulationPage.o
+      spbase::_as_str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, WeatherData&) in GUI_ParametricSimulationPage.o
+      ...
+  "WeatherData::clear()", referenced from:
+      SPFrame::UpdateClimateFile(wxString&, var_map&, bool) in GUI_ClimatePage.o
+  "WeatherData::append(double, double, double, double, double, double, double, double)", referenced from:
+      SPFrame::UpdateClimateFile(wxString&, var_map&, bool) in GUI_ClimatePage.o
+  "WeatherData::getStep(int, double&, double&, double&, double&, double&, double&, double&, double&)", referenced from:
+      SPFrame::UpdateDesignSelect(int, var_map&) in GUI_LayoutPage.o
+  "WeatherData::resizeAll(int, double)", referenced from:
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, WeatherData&) in GUI_LayoutPage.o
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, WeatherData&) in GUI_main.o
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, WeatherData&) in GUI_OptimizationPage.o
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, WeatherData&) in GUI_ParametricSimulationPage.o
+  "WeatherData::WeatherData()", referenced from:
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "opt_element::get_xr()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+  "opt_element::get_yr()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+  "sp_optimize::getOptimizationSimulationHistory(std::__1::vector<std::__1::vector<double, std::__1::allocator<double> >, std::__1::allocator<std::__1::vector<double, std::__1::allocator<double> > > >&, std::__1::vector<double, std::__1::allocator<double> >&, std::__1::vector<double, std::__1::allocator<double> >&)", referenced from:
+      _optimize(lk::invoke_t&) in scripting.o
+  "weatherfile::open(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)", referenced from:
+      SPFrame::UpdateClimateFile(wxString&, var_map&, bool) in GUI_ClimatePage.o
+  "weatherfile::read(weather_record*)", referenced from:
+      SPFrame::UpdateClimateFile(wxString&, var_map&, bool) in GUI_ClimatePage.o
+  "weatherfile::weatherfile()", referenced from:
+      SPFrame::UpdateClimateFile(wxString&, var_map&, bool) in GUI_ClimatePage.o
+  "weatherfile::~weatherfile()", referenced from:
+      SPFrame::UpdateClimateFile(wxString&, var_map&, bool) in GUI_ClimatePage.o
+  "AutoPilot_MT::CancelSimulation()", referenced from:
+      SPFrame::OnDoOptimizationSimulation(wxCommandEvent&) in GUI_OptimizationPage.o
+  "AutoPilot_MT::CalculateFluxMaps(sp_flux_table&, int, int, bool)", referenced from:
+      SPFrame::SAMInputParametric() in GUI_main.o
+  "AutoPilot_MT::AutoPilot_MT()", referenced from:
+      SPFrame::SAMInputParametric() in GUI_main.o
+      SPFrame::OnDoOptimizationSimulation(wxCommandEvent&) in GUI_OptimizationPage.o
+      _optimize(lk::invoke_t&) in scripting.o
+  "st_hash_tree::add_object(void*, double, double, double*)", referenced from:
+      FieldPlot::SetPlotData(SolarField&, int) in FieldPlot.o
+  "st_hash_tree::create_mesh(KDLayoutData&)", referenced from:
+      FieldPlot::SetPlotData(SolarField&, int) in FieldPlot.o
+  "st_hash_tree::get_all_data_at_loc(std::__1::vector<void*, std::__1::allocator<void*> >&, double, double)", referenced from:
+      SPFrame::OnFieldPlotMouseRight(wxMouseEvent&) in GUI_PlotFieldPage.o
+  "st_hash_tree::add_neighborhood_data()", referenced from:
+      FieldPlot::SetPlotData(SolarField&, int) in FieldPlot.o
+  "st_hash_tree::st_hash_tree()", referenced from:
+      FieldPlot::FieldPlot(wxPanel*, SolarField&, int, int, wxPoint, wxSize, long) in FieldPlot.o
+  "sp_flux_table::sp_flux_table()", referenced from:
+      SPFrame::SAMInputParametric() in GUI_main.o
+  "weather_header::reset()", referenced from:
+      weather_header::weather_header() in GUI_ClimatePage.o
+  "weather_record::reset()", referenced from:
+      SPFrame::UpdateClimateFile(wxString&, var_map&, bool) in GUI_ClimatePage.o
+  "LayoutSimThread::IsFinished()", referenced from:
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "LayoutSimThread::StartThread()", referenced from:
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "LayoutSimThread::GetSimMessages()", referenced from:
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "LayoutSimThread::CancelSimulation()", referenced from:
+      SPFrame::OnDoLayout(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+      SPFrame::OnParametricSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+  "LayoutSimThread::IsFinishedWithErrors()", referenced from:
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "LayoutSimThread::IsSimulationCancelled()", referenced from:
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "LayoutSimThread::Setup(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, SolarField*, std::__1::vector<sim_result, std::__1::allocator<sim_result> >*, WeatherData*, int, int, bool, bool)", referenced from:
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "LayoutSimThread::GetStatus(int*, int*)", referenced from:
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "simulation_info::getCallbackData()", referenced from:
+      _optimize(lk::invoke_t&) in scripting.o
+  "simulation_info::getSimulationInfo(int&, int&, double&)", referenced from:
+      SPFrame::SimProgressUpdate(simulation_info*) in GUI_LayoutSimulationPage.o
+  "simulation_info::setCallbackFunction(bool (*)(simulation_info*, void*), void*)", referenced from:
+      SPFrame::SPFrame(wxWindow*, int, wxString const&, wxPoint const&, wxSize const&, long) in GUI_main.o
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SolarPILOTScriptWindow::SolarPILOTScriptWindow(wxWindow*, int) in scripting.o
+  "simulation_info::getCurrentSimulation()", referenced from:
+      SAMParametricCallback(simulation_info*, void*) in GUI_main.o
+      SPFrame::OptimizeProgressSummaryUpdate(simulation_info*) in GUI_OptimizationPage.o
+      SPFrame::OptimizeProgressDetailUpdate(simulation_info*) in GUI_OptimizationPage.o
+      LKInfoCallback(simulation_info*, void*) in scripting.o
+  "simulation_info::getSimulationNotices()", referenced from:
+      SPFrame::SimProgressUpdate(simulation_info*) in GUI_LayoutSimulationPage.o
+      SPFrame::OptimizeProgressSummaryUpdate(simulation_info*) in GUI_OptimizationPage.o
+      LKInfoCallback(simulation_info*, void*) in scripting.o
+  "simulation_info::clearSimulationNotices()", referenced from:
+      SPFrame::SimProgressUpdate(simulation_info*) in GUI_LayoutSimulationPage.o
+      SPFrame::OptimizeProgressSummaryUpdate(simulation_info*) in GUI_OptimizationPage.o
+  "simulation_info::getTotalSimulationCount()", referenced from:
+      SAMParametricCallback(simulation_info*, void*) in GUI_main.o
+      SPFrame::OptimizeProgressSummaryUpdate(simulation_info*) in GUI_OptimizationPage.o
+      SPFrame::OptimizeProgressDetailUpdate(simulation_info*) in GUI_OptimizationPage.o
+      LKInfoCallback(simulation_info*, void*) in scripting.o
+  "simulation_info::Reset()", referenced from:
+      SPFrame::OnDoLayout(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::StartSimTimer() in GUI_LayoutSimulationPage.o
+      _simulate(lk::invoke_t&) in scripting.o
+  "simulation_info::isEnabled(bool)", referenced from:
+      SPFrame::SPFrame(wxWindow*, int, wxString const&, wxPoint const&, wxSize const&, long) in GUI_main.o
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+  "simulation_info::isEnabled()", referenced from:
+      SPFrame::SimProgressUpdate(simulation_info*) in GUI_LayoutSimulationPage.o
+  "simulation_error::isDisplayNow()", referenced from:
+      SPFrame::SimErrorHandler(simulation_error*) in GUI_LayoutSimulationPage.o
+  "simulation_error::clearErrorLog()", referenced from:
+      SPFrame::SimErrorHandler(simulation_error*) in GUI_LayoutSimulationPage.o
+  "simulation_error::setTerminateStatus(bool)", referenced from:
+      SPFrame::SimErrorHandler(simulation_error*) in GUI_LayoutSimulationPage.o
+  "simulation_error::getSimulationErrors()", referenced from:
+      SPFrame::SimErrorHandler(simulation_error*) in GUI_LayoutSimulationPage.o
+  "simulation_error::setCallbackFunction(void (*)(simulation_error*, void*), void*)", referenced from:
+      SPFrame::SPFrame(wxWindow*, int, wxString const&, wxPoint const&, wxSize const&, long) in GUI_main.o
+  "simulation_error::Reset()", referenced from:
+      SPFrame::OnDoLayout(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::SimErrorHandler(simulation_error*) in GUI_LayoutSimulationPage.o
+  "simulation_error::isFatal()", referenced from:
+      SPFrame::SimErrorHandler(simulation_error*) in GUI_LayoutSimulationPage.o
+  "simulation_table::at(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+  "simulation_table::nsim()", referenced from:
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+  "simulation_table::getKeys(ArrayString&)", referenced from:
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+  "simulation_table::ClearAll()", referenced from:
+      SPFrame::SyncParValuesTable() in GUI_ParametricSimulationPage.o
+  "simulation_table::operator[](std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SPFrame::SyncParValuesTable() in GUI_ParametricSimulationPage.o
+  "optical_hash_tree::get_terminal_nodes()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+  "ST_IntersectionData::AllocateArrays(int)", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "lk::vardata_t::vec_append(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+      _get_layout_info(lk::invoke_t&) in scripting.o
+  "lk::vardata_t::assign(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+      _sp_var(lk::invoke_t&) in scripting.o
+  "lk::vardata_t::hash_item(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, lk::vardata_t const&)", referenced from:
+      _detail_results(lk::invoke_t&) in scripting.o
+      _optimize(lk::invoke_t&) in scripting.o
+  "lk::vardata_t::hash_item(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+      _summary_results(lk::invoke_t&) in scripting.o
+  "lk::vardata_t::hash_item(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, double)", referenced from:
+      _detail_results(lk::invoke_t&) in scripting.o
+      _optimize(lk::invoke_t&) in scripting.o
+  "Flux::getRandomObject()", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "Land::getExtents(var_map&, double*)", referenced from:
+      FieldPlot::SetPlotData(SolarField&, int) in FieldPlot.o
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+  "Land::getLandBoundArea()", referenced from:
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+  "Land::getRadialExtents(var_map&, double*, double)", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+  "Vect::Set(double, double, double)", referenced from:
+      SPFrame::SolTraceFluxBinning(SolarField&) in GUI_main.o
+  "Vect::Vect(Vect const&)", referenced from:
+      _modify_heliostats(lk::invoke_t&) in scripting.o
+      void std::__1::vector<layout_obj, std::__1::allocator<layout_obj> >::__push_back_slow_path<layout_obj>(layout_obj&&) in scripting.o
+  "Vect::Vect()", referenced from:
+      SPFrame::SolTraceFluxBinning(SolarField&) in GUI_main.o
+      _modify_heliostats(lk::invoke_t&) in scripting.o
+  "DTobj::Now()", referenced from:
+      SPFrame::SolTraceFileExport(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) in GUI_PerformanceSimulationPage.o
+  "Random::integer(int, int)", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "ioutil::dir_exists(char const*)", referenced from:
+      _save_from_script(lk::invoke_t&) in scripting.o
+      _dump_varmap(lk::invoke_t&) in scripting.o
+      _open_from_script(lk::invoke_t&) in scripting.o
+  "ioutil::file_exists(char const*)", referenced from:
+      SPFrame::OnSunImport(wxCommandEvent&) in GUI_ClimatePage.o
+      SPFrame::BoundsImport() in GUI_LayoutPage.o
+      SPFrame::OnLayoutImport(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::UpdateRecents() in GUI_main.o
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+      kml_select_dialog::OnTowerFile(wxCommandEvent&) in kml_select_dialog.o
+      _heliostats_by_region(lk::invoke_t&) in scripting.o
+      ...
+  "ioutil::getDelimiter(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&)", referenced from:
+      SPFrame::OnLayoutImport(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+  "ioutil::saveXMLInputFile(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, var_map&, parametric&, optimization&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+      SPFrame::Save(int) in GUI_main.o
+      _save_from_script(lk::invoke_t&) in scripting.o
+  "ioutil::parseXMLInputFile(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, var_map&, parametric&, optimization&)", referenced from:
+      SPFrame::Open(wxString, bool) in GUI_main.o
+  "ioutil::ext_only(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+      SPFrame::BoundsImport() in GUI_LayoutPage.o
+      SPFrame::SAMInputParametric() in GUI_main.o
+      SPFrame::SAMInputParametric2() in GUI_main.o
+  "ioutil::name_only(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+      SPFrame::LoadClimateFiles() in GUI_ClimatePage.o
+      SPFrame::CreateParametricsTable(parametric&, std::__1::vector<sim_result, std::__1::allocator<sim_result> >&, grid_emulator&) in GUI_main.o
+      SPFrame::OnParEditVar(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SPFrame::ParRefreshValuesList() in GUI_ParametricSimulationPage.o
+  "ioutil::path_only(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+      _save_from_script(lk::invoke_t&) in scripting.o
+      _dump_varmap(lk::invoke_t&) in scripting.o
+      _open_from_script(lk::invoke_t&) in scripting.o
+  "ioutil::read_file(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&)", referenced from:
+      SPFrame::OnSunImport(wxCommandEvent&) in GUI_ClimatePage.o
+      SPFrame::BoundsImport() in GUI_LayoutPage.o
+      SPFrame::OnLayoutImport(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::UpdateRecents() in GUI_main.o
+      SPFrame::AddRecentFile(wxFileName&) in GUI_main.o
+      gui_util::parseSettingsFile(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, gui_settings&) in gui_util.o
+      kml_select_dialog::OnTowerFile(wxCommandEvent&) in kml_select_dialog.o
+      ...
+  "ioutil::read_line(__sFILE*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, int)", referenced from:
+      SPFrame::Open(wxString, bool) in GUI_main.o
+  "Ambient::calcSunPosition(var_map&, DTobj&, double*, double*, bool)", referenced from:
+      SPFrame::SAMInputParametric2() in GUI_main.o
+  "Ambient::calcSpacedDaysHours(double, double, double, int, double, std::__1::vector<std::__1::vector<double, std::__1::allocator<double> >, std::__1::allocator<std::__1::vector<double, std::__1::allocator<double> > > >&, std::__1::vector<int, std::__1::allocator<int> >&)", referenced from:
+      SPFrame::SAMInputParametric2() in GUI_main.o
+  "Ambient::calcSunVectorFromAzZen(double, double)", referenced from:
+      SPFrame::OnLayoutImport(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::OnLayoutRefresh(wxCommandEvent&) in GUI_LayoutSimulationPage.o
+      SPFrame::Open(wxString, bool) in GUI_main.o
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::DoManagedLayout(SolarField&, var_map&) in GUI_main.o
+      SPFrame::DoPerformanceSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+      ...
+  "Toolbox::poly_from_svg(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::vector<sp_point, std::__1::allocator<sp_point> >&, bool)", referenced from:
+      _heliostats_by_region(lk::invoke_t&) in scripting.o
+  "Toolbox::pointInPolygon(std::__1::vector<sp_point, std::__1::allocator<sp_point> > const&, sp_point const&)", referenced from:
+      _heliostats_by_region(lk::invoke_t&) in scripting.o
+  "Toolbox::round(double)", referenced from:
+      SPFrame::SAMInputParametric2() in GUI_main.o
+  "Toolbox::rotation(double, int, Vect&)", referenced from:
+      SPFrame::SolTraceFluxBinning(SolarField&) in GUI_main.o
+  "Toolbox::rotation(double, int, sp_point&)", referenced from:
+      FluxPlot::DoPaint(wxDC&) in FluxPlot.o
+  "interop::ticker_increment(int*, int*, bool*, int)", referenced from:
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+  "interop::ticker_initialize(int*, int)", referenced from:
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+  "interop::UpdateMapLayoutData(var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >*)", referenced from:
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+  "interop::PerformanceSimulationPrep(SolarField&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&, int)", referenced from:
+      SPFrame::DoPerformanceSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+      _simulate(lk::invoke_t&) in scripting.o
+  "interop::SolTraceFluxSimulation_ST(void*, int, ST_System&, int (*)(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, void*), void*, std::__1::vector<std::__1::vector<double, std::__1::allocator<double> >, std::__1::allocator<std::__1::vector<double, std::__1::allocator<double> > > >*, std::__1::vector<std::__1::vector<double, std::__1::allocator<double> >, std::__1::allocator<std::__1::vector<double, std::__1::allocator<double> > > >*, bool, bool)", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "interop::GenerateSimulationWeatherData(var_map&, int, ArrayString&)", referenced from:
+      SPFrame::UpdateDesignSelect(int, var_map&) in GUI_LayoutPage.o
+  "var_map::add_receiver(int)", referenced from:
+      SPFrame::OnReceiverAdd(wxCommandEvent&) in GUI_ReceiverPage.o
+      _add_receiver(lk::invoke_t&) in scripting.o
+  "var_map::add_heliostat(int)", referenced from:
+      SPFrame::OnHeliotempAdd(wxCommandEvent&) in GUI_HeliostatPage.o
+      _add_heliostat_template(lk::invoke_t&) in scripting.o
+  "var_map::drop_receiver(int)", referenced from:
+      SPFrame::OnReceiverDel(wxCommandEvent&) in GUI_ReceiverPage.o
+      _drop_receiver(lk::invoke_t&) in scripting.o
+  "var_map::drop_heliostat(int)", referenced from:
+      SPFrame::OnHeliotempDel(wxCommandEvent&) in GUI_HeliostatPage.o
+      _drop_heliostat_template(lk::invoke_t&) in scripting.o
+  "var_map::reset()", referenced from:
+      SPFrame::SPFrame(wxWindow*, int, wxString const&, wxPoint const&, wxSize const&, long) in GUI_main.o
+      SPFrame::NewFile() in GUI_main.o
+      _reset_sf(lk::invoke_t&) in scripting.o
+  "var_map::var_map(var_map&)", referenced from:
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::OnDoOptimizationSimulation(wxCommandEvent&) in GUI_OptimizationPage.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+  "var_map::var_map()", referenced from:
+      SPFrame::SPFrame(wxWindow*, int, wxString const&, wxPoint const&, wxSize const&, long) in GUI_main.o
+  "DateTime::GetMonthName(int)", referenced from:
+      SPFrame::UpdateDesignSelect(int, var_map&) in GUI_LayoutPage.o
+  "DateTime::CalculateDayOfYear(int, int, int)", referenced from:
+      SPFrame::UpdateDesignSelect(int, var_map&) in GUI_LayoutPage.o
+  "DateTime::DateTime(double, double)", referenced from:
+      SPFrame::SAMInputParametric2() in GUI_main.o
+  "DateTime::DateTime()", referenced from:
+      SPFrame::SolTraceFileExport(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) in GUI_PerformanceSimulationPage.o
+  "Receiver::getAbsorberArea()", referenced from:
+      SPFrame::SolTraceFluxBinning(SolarField&) in GUI_main.o
+  "Receiver::getFluxSurfaces()", referenced from:
+      FluxPlot::SaveDataTable(wxString&, wxString&) in FluxPlot.o
+      FluxPlot::DoPaint(wxDC&) in FluxPlot.o
+      SPFrame::SolTraceFluxBinning(SolarField&) in GUI_main.o
+      SPFrame::OnFluxPlotBinChange(int) in GUI_PlotFluxPage.o
+      _get_fluxmap(lk::invoke_t&) in scripting.o
+  "Receiver::getGeometryType()", referenced from:
+      FluxPlot::DoPaint(wxDC&) in FluxPlot.o
+      SPFrame::SolTraceFluxBinning(SolarField&) in GUI_main.o
+      SPFrame::SAMInputParametric2() in GUI_main.o
+  "Receiver::getReceiverWidth(var_receiver&)", referenced from:
+      FluxPlot::DoPaint(wxDC&) in FluxPlot.o
+      SPFrame::SolTraceFluxBinning(SolarField&) in GUI_main.o
+  "Receiver::isReceiverEnabled()", referenced from:
+      SPFrame::SolTraceFluxBinning(SolarField&) in GUI_main.o
+      rec_select_dialog::rec_select_dialog(wxWindow*, int, wxString, SolarField*, wxPoint, wxSize, long) in rec_select_dialog.o
+  "Receiver::DefineReceiverGeometry(int, int)", referenced from:
+      SPFrame::SAMInputParametric2() in GUI_main.o
+      SPFrame::OnFluxPlotBinChange(int) in GUI_PlotFluxPage.o
+  "Receiver::getVarMap()", referenced from:
+      FluxPlot::DoPaint(wxDC&) in FluxPlot.o
+      SPFrame::UpdateFluxPlotSelections() in GUI_main.o
+      SPFrame::SolTraceFluxBinning(SolarField&) in GUI_main.o
+      SPFrame::CreateFluxPlotPage(wxScrolledWindow*) in GUI_PlotFluxPage.o
+      rec_select_dialog::rec_select_dialog(wxWindow*, int, wxString, SolarField*, wxPoint, wxSize, long) in rec_select_dialog.o
+  "multivar::at(int)", referenced from:
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::CreateParametricsTable(parametric&, std::__1::vector<sim_result, std::__1::allocator<sim_result> >&, grid_emulator&) in GUI_main.o
+      SPFrame::OnDoOptimizationSimulation(wxCommandEvent&) in GUI_OptimizationPage.o
+      SPFrame::OnApplyOptimizationResult(wxCommandEvent&) in GUI_OptimizationPage.o
+      SPFrame::OnOptimizeGridChange(wxGridEvent&) in GUI_OptimizationPage.o
+      SPFrame::OptReloadVariableList() in GUI_OptimizationPage.o
+      SPFrame::CheckOptGridRange() in GUI_OptimizationPage.o
+      ...
+  "multivar::size()", referenced from:
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::CreateParametricsTable(parametric&, std::__1::vector<sim_result, std::__1::allocator<sim_result> >&, grid_emulator&) in GUI_main.o
+      SPFrame::OnDoOptimizationSimulation(wxCommandEvent&) in GUI_OptimizationPage.o
+      SPFrame::OnOptimizeAddVar(wxCommandEvent&) in GUI_OptimizationPage.o
+      SPFrame::OptReloadVariableList() in GUI_OptimizationPage.o
+      SPFrame::OnParAddVar(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SPFrame::OnParEditLinkages(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      ...
+  "multivar::Index(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >)", referenced from:
+      SPFrame::OnOptimizeAddVar(wxCommandEvent&) in GUI_OptimizationPage.o
+      SPFrame::OnOptimizeGridChange(wxGridEvent&) in GUI_OptimizationPage.o
+      SPFrame::OnParAddVar(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+  "multivar::clear()", referenced from:
+      SPFrame::NewFile() in GUI_main.o
+  "multivar::addVar(spbase*)", referenced from:
+      SPFrame::OnOptimizeAddVar(wxCommandEvent&) in GUI_OptimizationPage.o
+      SPFrame::OnOptimizeGridChange(wxGridEvent&) in GUI_OptimizationPage.o
+      SPFrame::OnParAddVar(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+  "multivar::remove(int)", referenced from:
+      SPFrame::OnOptimizeRemoveVar(wxCommandEvent&) in GUI_OptimizationPage.o
+      SPFrame::OnOptimizeGridChange(wxGridEvent&) in GUI_OptimizationPage.o
+      SPFrame::OnParRemoveVar(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+  "multivar::multivar()", referenced from:
+      SPFrame::SPFrame(wxWindow*, int, wxString const&, wxPoint const&, wxSize const&, long) in GUI_main.o
+  "multivar::operator[](int)", referenced from:
+      SPFrame::OnOptimizeAddVar(wxCommandEvent&) in GUI_OptimizationPage.o
+      SPFrame::OnParAddVar(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+  "sp_point::Add(double, double, double)", referenced from:
+      FluxPlot::DoPaint(wxDC&) in FluxPlot.o
+  "sp_point::sp_point(sp_point const&)", referenced from:
+      FluxPlot::DoPaint(wxDC&) in FluxPlot.o
+      SPFrame::OnBoundsEdit(wxGridEvent&) in GUI_LayoutPage.o
+      std::__1::vector<sp_point, std::__1::allocator<sp_point> >::vector(std::__1::vector<sp_point, std::__1::allocator<sp_point> > const&) in GUI_LayoutPage.o
+      std::__1::vector<sp_point, std::__1::allocator<sp_point> >::__append(unsigned long, sp_point const&) in GUI_LayoutPage.o
+      void std::__1::vector<sp_point, std::__1::allocator<sp_point> >::__push_back_slow_path<sp_point>(sp_point&&) in GUI_LayoutPage.o
+      std::__1::vector<sp_point, std::__1::allocator<sp_point> >::__append(unsigned long, sp_point const&) in GUI_main.o
+      std::__1::vector<sp_point, std::__1::allocator<sp_point> >::__append(unsigned long, sp_point const&) in GUI_OptimizationPage.o
+      ...
+  "sp_point::sp_point(double, double, double)", referenced from:
+      SPFrame::OnBoundsEdit(wxGridEvent&) in GUI_LayoutPage.o
+      SPFrame::SolTraceFluxBinning(SolarField&) in GUI_main.o
+      ParseKML(wxString&, double&, double&, std::__1::vector<sp_point, std::__1::allocator<sp_point> >&) in parse_kml.o
+      _heliostats_by_region(lk::invoke_t&) in scripting.o
+  "sp_point::sp_point()", referenced from:
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::vector<std::__1::vector<sp_point, std::__1::allocator<sp_point> >, std::__1::allocator<std::__1::vector<sp_point, std::__1::allocator<sp_point> > > >&) in GUI_LayoutPage.o
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::vector<std::__1::vector<sp_point, std::__1::allocator<sp_point> >, std::__1::allocator<std::__1::vector<sp_point, std::__1::allocator<sp_point> > > >&) in GUI_main.o
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::vector<std::__1::vector<sp_point, std::__1::allocator<sp_point> >, std::__1::allocator<std::__1::vector<sp_point, std::__1::allocator<sp_point> > > >&) in GUI_OptimizationPage.o
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::vector<std::__1::vector<sp_point, std::__1::allocator<sp_point> >, std::__1::allocator<std::__1::vector<sp_point, std::__1::allocator<sp_point> > > >&) in GUI_ParametricSimulationPage.o
+      _modify_heliostats(lk::invoke_t&) in scripting.o
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::vector<std::__1::vector<sp_point, std::__1::allocator<sp_point> >, std::__1::allocator<std::__1::vector<sp_point, std::__1::allocator<sp_point> > > >&) in scripting.o
+  "sp_point::operator[](int const&)", referenced from:
+      SPFrame::UpdateLandBoundsGrid(var_map&) in GUI_LayoutPage.o
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::vector<std::__1::vector<sp_point, std::__1::allocator<sp_point> >, std::__1::allocator<std::__1::vector<sp_point, std::__1::allocator<sp_point> > > >&) in GUI_LayoutPage.o
+      spbase::_as_str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::vector<std::__1::vector<sp_point, std::__1::allocator<sp_point> >, std::__1::allocator<std::__1::vector<sp_point, std::__1::allocator<sp_point> > > >&) in GUI_LayoutPage.o
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::vector<std::__1::vector<sp_point, std::__1::allocator<sp_point> >, std::__1::allocator<std::__1::vector<sp_point, std::__1::allocator<sp_point> > > >&) in GUI_main.o
+      spbase::_as_str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::vector<std::__1::vector<sp_point, std::__1::allocator<sp_point> >, std::__1::allocator<std::__1::vector<sp_point, std::__1::allocator<sp_point> > > >&) in GUI_main.o
+      spbase::_setv(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::vector<std::__1::vector<sp_point, std::__1::allocator<sp_point> >, std::__1::allocator<std::__1::vector<sp_point, std::__1::allocator<sp_point> > > >&) in GUI_OptimizationPage.o
+      spbase::_as_str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::vector<std::__1::vector<sp_point, std::__1::allocator<sp_point> >, std::__1::allocator<std::__1::vector<sp_point, std::__1::allocator<sp_point> > > >&) in GUI_OptimizationPage.o
+      ...
+  "AutoPilot::CancelSimulation()", referenced from:
+      SPFrame::OnDoOptimizationSimulation(wxCommandEvent&) in GUI_OptimizationPage.o
+  "AutoPilot::SetDetailCallback(bool (*)(simulation_info*, void*), void*)", referenced from:
+      SPFrame::OnDoOptimizationSimulation(wxCommandEvent&) in GUI_OptimizationPage.o
+  "AutoPilot::SetSummaryCallback(bool (*)(simulation_info*, void*), void*)", referenced from:
+      SPFrame::SAMInputParametric() in GUI_main.o
+      SPFrame::OnDoOptimizationSimulation(wxCommandEvent&) in GUI_OptimizationPage.o
+      _optimize(lk::invoke_t&) in scripting.o
+  "AutoPilot::GetOptimizationObject()", referenced from:
+      _optimize(lk::invoke_t&) in scripting.o
+  "AutoPilot::SetDetailCallbackStatus(bool)", referenced from:
+      SPFrame::OnDoOptimizationSimulation(wxCommandEvent&) in GUI_OptimizationPage.o
+      SPFrame::OnDisableDetailUpdate(wxCommandEvent&) in GUI_OptimizationPage.o
+  "AutoPilot::GenerateDesignPointSimulations(var_map&, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >&)", referenced from:
+      SPFrame::OnDoOptimizationSimulation(wxCommandEvent&) in GUI_OptimizationPage.o
+      _optimize(lk::invoke_t&) in scripting.o
+  "AutoPilot::Setup(var_map&, bool)", referenced from:
+      SPFrame::SAMInputParametric() in GUI_main.o
+      SPFrame::OnDoOptimizationSimulation(wxCommandEvent&) in GUI_OptimizationPage.o
+      _optimize(lk::invoke_t&) in scripting.o
+  "AutoPilot::Optimize(int, std::__1::vector<double*, std::__1::allocator<double*> >&, std::__1::vector<double, std::__1::allocator<double> >&, std::__1::vector<double, std::__1::allocator<double> >&, std::__1::vector<double, std::__1::allocator<double> >&, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*)", referenced from:
+      SPFrame::OnDoOptimizationSimulation(wxCommandEvent&) in GUI_OptimizationPage.o
+      _optimize(lk::invoke_t&) in scripting.o
+  "AutoPilot::AutoPilot()", referenced from:
+      SPFrame::OnDoOptimizationSimulation(wxCommandEvent&) in GUI_OptimizationPage.o
+      _optimize(lk::invoke_t&) in scripting.o
+  "AutoPilot::~AutoPilot()", referenced from:
+      SPFrame::SAMInputParametric() in GUI_main.o
+  "Heliostat::IsInLayout()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      SPFrame::UpdateLayoutGrid() in GUI_LayoutSimulationPage.o
+  "Heliostat::getAimPoint()", referenced from:
+      FluxPlot::DoPaint(wxDC&) in FluxPlot.o
+      SPFrame::UpdateLayoutGrid() in GUI_LayoutSimulationPage.o
+      SPFrame::UpdateFluxLC(int) in GUI_PerformanceSimulationPage.o
+      SPFrame::LayoutSimulationExport(SolarField&, wxString&, std::__1::vector<bool, std::__1::allocator<bool> >&, wxString&, wxString&, bool) in GUI_PlotFieldPage.o
+      _detail_results(lk::invoke_t&) in scripting.o
+      _modify_heliostats(lk::invoke_t&) in scripting.o
+  "Heliostat::getLocation()", referenced from:
+      FieldPlot::SetPlotData(SolarField&, int) in FieldPlot.o
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      SPFrame::UpdateLayoutGrid() in GUI_LayoutSimulationPage.o
+      SPFrame::UpdateFluxLC(int) in GUI_PerformanceSimulationPage.o
+      SPFrame::OnFieldPlotMouseRight(wxMouseEvent&) in GUI_PlotFieldPage.o
+      SPFrame::LayoutSimulationExport(SolarField&, wxString&, std::__1::vector<bool, std::__1::allocator<bool> >&, wxString&, wxString&, bool) in GUI_PlotFieldPage.o
+      _detail_results(lk::invoke_t&) in scripting.o
+      ...
+  "Heliostat::setAimPoint(double, double, double)", referenced from:
+      _modify_heliostats(lk::invoke_t&) in scripting.o
+  "Heliostat::setInLayout(bool)", referenced from:
+      SPFrame::OnDeleteSelectedHeliostats(wxCommandEvent&) in GUI_PlotFieldPage.o
+      SPFrame::OnRestoreSelectedHeliostats(wxCommandEvent&) in GUI_PlotFieldPage.o
+  "Heliostat::getRadialPos()", referenced from:
+      FluxPlot::DoPaint(wxDC&) in FluxPlot.o
+      SPFrame::UpdateLayoutGrid() in GUI_LayoutSimulationPage.o
+      SPFrame::UpdateFluxLC(int) in GUI_PerformanceSimulationPage.o
+      _heliostats_by_region(lk::invoke_t&) in scripting.o
+  "Heliostat::getCantVector()", referenced from:
+      SPFrame::UpdateLayoutGrid() in GUI_LayoutSimulationPage.o
+      _modify_heliostats(lk::invoke_t&) in scripting.o
+  "Heliostat::getSlantRange()", referenced from:
+      SPFrame::UpdateLayoutGrid() in GUI_LayoutSimulationPage.o
+      SPFrame::UpdateFluxLC(int) in GUI_PerformanceSimulationPage.o
+  "Heliostat::getTrackVector()", referenced from:
+      SPFrame::LayoutSimulationExport(SolarField&, wxString&, std::__1::vector<bool, std::__1::allocator<bool> >&, wxString&, wxString&, bool) in GUI_PlotFieldPage.o
+      _detail_results(lk::invoke_t&) in scripting.o
+  "Heliostat::getAzimuthalPos()", referenced from:
+      SPFrame::UpdateFluxLC(int) in GUI_PerformanceSimulationPage.o
+      _heliostats_by_region(lk::invoke_t&) in scripting.o
+  "Heliostat::getCornerCoords()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      SPFrame::LayoutSimulationExport(SolarField&, wxString&, std::__1::vector<bool, std::__1::allocator<bool> >&, wxString&, wxString&, bool) in GUI_PlotFieldPage.o
+  "Heliostat::getShadowCoords()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+  "Heliostat::getHeliostatName()", referenced from:
+      SPFrame::UpdateLayoutGrid() in GUI_LayoutSimulationPage.o
+      SPFrame::UpdateFluxLC(int) in GUI_PerformanceSimulationPage.o
+      _get_layout_info(lk::invoke_t&) in scripting.o
+  "Heliostat::getWhichReceiver()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      FluxPlot::DoPaint(wxDC&) in FluxPlot.o
+  "Heliostat::getMasterTemplate()", referenced from:
+      SPFrame::UpdateLayoutGrid() in GUI_LayoutSimulationPage.o
+      SPFrame::UpdateFluxLC(int) in GUI_PerformanceSimulationPage.o
+      _get_layout_info(lk::invoke_t&) in scripting.o
+      _modify_heliostats(lk::invoke_t&) in scripting.o
+  "Heliostat::getSummaryResults(std::__1::vector<double, std::__1::allocator<double> >&)", referenced from:
+      SPFrame::LayoutSimulationExport(SolarField&, wxString&, std::__1::vector<bool, std::__1::allocator<bool> >&, wxString&, wxString&, bool) in GUI_PlotFieldPage.o
+  "Heliostat::getCollisionRadius()", referenced from:
+      FieldPlot::SetPlotData(SolarField&, int) in FieldPlot.o
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+  "Heliostat::getEfficiencyAtten()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      FieldPlot::HeliostatAnnotation(Heliostat*) in FieldPlot.o
+      _detail_results(lk::invoke_t&) in scripting.o
+  "Heliostat::getEfficiencyBlock()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      FieldPlot::HeliostatAnnotation(Heliostat*) in FieldPlot.o
+      _detail_results(lk::invoke_t&) in scripting.o
+  "Heliostat::getEfficiencyTotal()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      FieldPlot::HeliostatAnnotation(Heliostat*) in FieldPlot.o
+      _detail_results(lk::invoke_t&) in scripting.o
+  "Heliostat::getPowerToReceiver()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      FieldPlot::HeliostatAnnotation(Heliostat*) in FieldPlot.o
+      _detail_results(lk::invoke_t&) in scripting.o
+  "Heliostat::getEfficiencyCosine()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      FieldPlot::HeliostatAnnotation(Heliostat*) in FieldPlot.o
+      _detail_results(lk::invoke_t&) in scripting.o
+  "Heliostat::getEfficiencyObject()", referenced from:
+      _modify_heliostats(lk::invoke_t&) in scripting.o
+  "Heliostat::getEfficiencyShading()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      FieldPlot::HeliostatAnnotation(Heliostat*) in FieldPlot.o
+      _detail_results(lk::invoke_t&) in scripting.o
+  "Heliostat::getTotalReflectivity()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      _detail_results(lk::invoke_t&) in scripting.o
+  "Heliostat::getRankingMetricValue()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      _detail_results(lk::invoke_t&) in scripting.o
+      _get_layout_info(lk::invoke_t&) in scripting.o
+  "Heliostat::getEfficiencyIntercept()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      FieldPlot::HeliostatAnnotation(Heliostat*) in FieldPlot.o
+      _detail_results(lk::invoke_t&) in scripting.o
+  "Heliostat::getEfficiencyCloudiness()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+      FieldPlot::HeliostatAnnotation(Heliostat*) in FieldPlot.o
+      _detail_results(lk::invoke_t&) in scripting.o
+  "Heliostat::getId()", referenced from:
+      FieldPlot::HeliostatAnnotation(Heliostat*) in FieldPlot.o
+      SPFrame::ParametricSimulate(parametric&) in GUI_main.o
+      SPFrame::OnUserParSimulate(wxCommandEvent&) in GUI_ParametricSimulationPage.o
+      SPFrame::GetSelectedHeliostats(std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&, bool) in GUI_PerformanceSimulationPage.o
+      SPFrame::LayoutSimulationExport(SolarField&, wxString&, std::__1::vector<bool, std::__1::allocator<bool> >&, wxString&, wxString&, bool) in GUI_PlotFieldPage.o
+      _detail_results(lk::invoke_t&) in scripting.o
+      _get_layout_info(lk::invoke_t&) in scripting.o
+      ...
+  "Heliostat::getArea()", referenced from:
+      FieldPlot::HeliostatAnnotation(Heliostat*) in FieldPlot.o
+      _detail_results(lk::invoke_t&) in scripting.o
+  "Heliostat::IsEnabled(bool)", referenced from:
+      SPFrame::OnDeleteSelectedHeliostats(wxCommandEvent&) in GUI_PlotFieldPage.o
+      SPFrame::OnRestoreSelectedHeliostats(wxCommandEvent&) in GUI_PlotFieldPage.o
+      _modify_heliostats(lk::invoke_t&) in scripting.o
+  "Heliostat::IsEnabled()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+  "Heliostat::getFocalX()", referenced from:
+      SPFrame::UpdateLayoutGrid() in GUI_LayoutSimulationPage.o
+      _modify_heliostats(lk::invoke_t&) in scripting.o
+  "Heliostat::getFocalY()", referenced from:
+      SPFrame::UpdateLayoutGrid() in GUI_LayoutSimulationPage.o
+      _modify_heliostats(lk::invoke_t&) in scripting.o
+  "Heliostat::getVarMap()", referenced from:
+      FieldPlot::DoPaint(wxDC&) in FieldPlot.o
+  "ST_System::CreateSTSystem(SolarField&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&, Vect&)", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+      SPFrame::SolTraceFileExport(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) in GUI_PerformanceSimulationPage.o
+  "ST_System::LoadIntoContext(ST_System*, void*)", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "ST_System::Write(__sFILE*)", referenced from:
+      SPFrame::SolTraceFileExport(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) in GUI_PerformanceSimulationPage.o
+  "ST_System::ST_System()", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+      SPFrame::SolTraceFileExport(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) in GUI_PerformanceSimulationPage.o
+  "ST_System::~ST_System()", referenced from:
+      SPFrame::SolTraceFileExport(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) in GUI_PerformanceSimulationPage.o
+  "vtable for AutoPilot_S", referenced from:
+      SPFrame::OnDoOptimizationSimulation(wxCommandEvent&) in GUI_OptimizationPage.o
+      _optimize(lk::invoke_t&) in scripting.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for st_hash_tree", referenced from:
+      FieldPlot::FieldPlot(wxPanel*, SolarField&, int, int, wxPoint, wxSize, long) in FieldPlot.o
+      FieldPlot::~FieldPlot() in FieldPlot.o
+  NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "_st_cosines", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "_st_create_context", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "_st_elementmap", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "_st_locations", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "_st_num_intersections", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "_st_raynumbers", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "_st_sim_params", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "_st_stagemap", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+  "_st_sun_stats", referenced from:
+      SPFrame::SolTraceFluxSimulation(SolarField&, var_map&, std::__1::vector<Heliostat*, std::__1::allocator<Heliostat*> >&) in GUI_main.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [solarpilot] Error 1
+make: *** [all] Error 2
